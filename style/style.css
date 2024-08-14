@@ -62,8 +62,8 @@ header .logo {
     display: block;
     padding: 15px 0;
     text-decoration: none;
-
 }
+
 
 .adentro {
     border-radius: 6px;
@@ -93,6 +93,10 @@ header .logo {
     width: 100%;
     text-align: center;
     overflow: hidden;
+}
+
+.lista_item a:hover{
+    text-decoration: none;
 }
 
 .lista_item--click {
