@@ -1,0 +1,30 @@
+{
+    "productos":[
+        {
+            "nombre": "Aceite Labial Hidratante 'GLOW YEAH'",
+            "imagen": "images/imagenesfbm/FBM_GlowYeahLipOil_DTC_110623.webp",
+            "descrip": "Un aceite labial que ofrece un aspecto espectacular y una hidratación intensa mientras añade un toque de brillo para ese GLOW YEAH durante todo el día. Nada de labios secos aquí: la manteca de mango africano y la flor de paracress nos mantienen frescas y hermosas. Úsalo solo o sobre tu color de labios favorito para un extra de hidratación.",
+            "precio": 16.00
+        },
+        {
+            "nombre": "Almohadillas de gel desinflamantes",
+            "imagen": "",
+            "descrip": "Estos parches en gel con forma de nube flotan bajo nuestros ojos con extracto de cafeína para ayudar a despertar la piel cansada y con bolsas que a veces pueden causar la apariencia de ojeras. También están impregnados de extracto de té verde para calmar y extracto de cactus para hidratar.",
+            "precio": 36.00
+        },
+        {
+            "nombre": "Crema Hidratante Sin Aceite Dreamy Dew",
+            "imagen": "images/imagenesfbm/FBM_DreamyDewMoisturizer_DTC_110623 (1).webp",
+            "descrip": "  Una crema ligera como una pluma, hidratante y libre de aceite que hace que nuestra piel se sienta maravillosamente bien para enamorarse. La fórmula sedosa incluye extractos de dos tipos de flor de loto y vitamina B12 para ayudar a controlar el exceso de grasa y calmar la piel. La corteza de sauce ayuda a mantener la piel suave. Usada mañana y noche, Dreamy Dew ayuda a que nuestra piel se sienta fresca y radiante, lista para lo que venga después.",
+            "precio": 18.00,
+            "size":"1.7 oz/ 50 ml"
+        },
+        {
+            "nombre": "Limpiador Facial Magico Limpio",
+            "imagen": "",
+            "descrip": "Un limpiador facial cremoso que elimina el maquillaje, la suciedad y el aceite. La magia comienza con el ácido ferúlico, un antioxidante de origen vegetal que protege la piel del daño ambiental, como el smog. Una mezcla equilibrante de algas marinas, hiedra, limón y salvia controla el exceso de aceite para que nuestros poros permanezcan libres de impurezas. La piel se sentirá rejuvenecida, nunca seca y siempre hermosa",
+            "precio": 36.00,
+            "size":"3.4 fl oz/ 100 ml"
+        }
+    ]
+}
