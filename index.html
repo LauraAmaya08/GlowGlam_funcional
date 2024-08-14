@@ -12,14 +12,15 @@
 <body>
     <header>
         <img src="images/home/Gray_and_Black_Simple_Studio_Logo__3_-removebg-preview.png" alt="Logo del sitio"
-            width="150px" />
+            width="180px" class="logo" />
+        <a href="#" class="carrito"><img src="assets/carrito.svg"></a>
         <button id="abrir"><img src="assets/menu.svg"></button>
         <nav class="navegador">
             <ul class="lista">
                 <button id="cerrar"><img src="assets/cerra.svg" alt=""></button>
                 <li class="lista_item lista_item--click">
                     <div class="lista__boton">
-                        <i class="bi bi-house" class="lista_icono"></i>
+                        <img src="assets/incio.svg">
                         <a href="#" class="nav_link">Inicio</a>
                     </div>
                 </li>
@@ -30,7 +31,7 @@
                 </li>
                 <li class="lista_item">
                     <div class="lista__boton lista__boton--click">
-                        <a href="#" class="nav_link">Categorías</a>
+                        <a href="#" class="nav_link">Marcas</a>
                         <img src="assets/flecha.svg" class="flecha"></img>
                     </div>
                     <ul class="lista_Mostrar">
@@ -48,14 +49,56 @@
                         </li>
                     </ul>
                 </li>
-                <li class="lista_item lista_item--click">
-                    <div class="lista__boton">
-                        <a href="#" class="nav_link">Carrito</a>
-                    </div>
-                </li>
             </ul>
         </nav>
     </header>
+    <section class="promo-section">
+        <img src="images/home/Green and Yellow Simple Clean Shoes Sale Banner.png" alt="Imagen de promoción" width="250">
+    </section>
+    <section id="bienvenida">
+        <h2 class="bienvenida__titulo">Conoce Glow Glam</h2>
+        <div class=videoyTexto>
+            <div class="bienvenida__texto">
+                <p>Glow Glam es el destino definitivo para los productos de maquillaje más exclusivos y
+                    deseados del mercado.
+                    Nuestra misión es realzar tu belleza única con productos de alta calidad que te permitan
+                    expresar tu estilo y personalidad. Ya sea que busques un look natural para el día a día
+                    o un maquillaje glamoroso para una ocasión especial, tenemos todo lo que necesitas.
+                    <br>
+                    <br>
+                    
+                    Sumérgete en el mundo de Glow Glam Cosmetics y déjanos ser tu aliado en la búsqueda de
+                    la perfección. Porque para nosotros, cada rostro es un lienzo único y cada cliente es
+                    nuestra inspiración.</p>
+            </div>
+            <video class="video" src="images/home/da2eaa83e7811e1af692cebf97835e95_t2.mp4" autoplay muted
+                playsinline loop width="130px"></video>
+        </div>
+    </section>
+    <footer>
+        <div class="boletin">
+            <h3>Suscríbete a Nuestro Boletín</h3>
+            <p> Sé el primero en enterarte de nuestras ofertas exclusivas y novedades.
+            </p>
+            <form id="registro">
+                <label for="email">Email: </label>
+                <input type="email" name="email">
+                <input class="submit" type="submit" value="ENVIAR">
+            </form>
+        </div>
+        <div id="contactos">
+            <ul>
+                <li>Calle Falsa 123, Ciudad, País</li>
+                <li>Teléfono: +123 456 7890</li>
+                <li>Email: contacto@glowglam.com</li>
+            </ul>
+
+        </div>
+        <div id="derechos">
+            <p>© 2024 Glow Glam. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
     <script src="js/main.js"></script>
 </body>
 
