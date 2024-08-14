@@ -31,4 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
         let menu = document.querySelector(".navegador");
         menu.classList.remove("visible")
     });
+
+    const abrirPregunta = document.querySelectorAll(".faq-pregunta")
+    abrirPregunta.forEach(element => {
+        element.addEventListener("click",()=>{
+            let itemFaq = element.parentElement;
+            document.querySelectorAll('.faq-item').forEach(element => {
+                if (element !== itemFaq) {
+                    element.classList.remove('active');
+                }
+            });
+    
+            itemFaq.classList.toggle("active")
+        })
+    })
+
+
 });
+
