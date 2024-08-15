@@ -341,3 +341,44 @@ label {
     text-align: center;
     font-family: OpenSansL;
 }
+
+/*productos*/
+
+#contenedor{
+    font-family: sans-serif;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 8%;
+    margin-top: 2%;
+}
+
+
+
+.producto {
+    width: 100%; 
+    max-width: 200px; 
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+
+.imagenProducto {
+    width: 100%;
+}
+
+.nombreProducto {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}

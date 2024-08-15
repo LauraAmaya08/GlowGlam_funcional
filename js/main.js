@@ -46,6 +46,32 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+//Cargar Json y mostrar Productos
 
-});
+const cargarJson = async() => {
+    try {
+        const respuesta = await fetch("../productos.json")
+        if (respuesta.ok){
+            const datos = await respuesta.json();
+            const productosArray = datos.productos
 
+            let productos = "";
+            productosArray.forEach(element => {
+                productos += `<div class = "producto">
+                <img class= "imagenProducto" src= ../${element.imagen} width="200px">
+                <h2 class= "nombreProducto"> ${element.nombre}</h2>
+                </div>
+                `
+            });
+            document.getElementById("productos").innerHTML = productos;
+        }else{
+            throw new Error ("Error al conectar con la base de datos")
+        }
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+cargarJson()
+
+})
