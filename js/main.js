@@ -57,9 +57,16 @@ const cargarJson = async() => {
 
             let productos = "";
             productosArray.forEach(element => {
+                let precio = element.precio
                 productos += `<div class = "producto">
-                <img class= "imagenProducto" src= ../${element.imagen} width="200px">
+                <a href="../index.html" class="productoEnlace">
+                <img class= "imagenProducto" src= "../${element.imagen}" >
+                <div class="info">
                 <h2 class= "nombreProducto"> ${element.nombre}</h2>
+                <h3 class= "precioProducto"> $${precio.toFixed(2)} </h3>
+                <h3 class= "marcaNombre"> ${element.marca}</h3>
+                </div>
+                </a>
                 </div>
                 `
             });

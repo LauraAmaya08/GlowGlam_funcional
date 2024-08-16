@@ -389,10 +389,9 @@ label {
 
 
 .imagenProducto {
+    height: 250px;
     border-radius: 10px;
     width: 100%;
-    max-height: 300px;
-
 }
 
 .nombreProducto {
@@ -412,4 +411,28 @@ label {
     margin: 10px;
     padding: 10px 0 0 0;
     font-family: OpenSansL;
+}
+
+
+.precioProducto,
+.marcaNombre{
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.info{
+    height: 200px;
+}
+
+.productoEnlace{
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+}
+
+.productoEnlace:hover{
+    text-decoration: none;
+    color: inherit;
+    display: block; 
 }
