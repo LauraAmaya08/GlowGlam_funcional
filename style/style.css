@@ -8,6 +8,16 @@
     src: url(../fonts/static/Oswald-Light.ttf);
 }
 
+@keyframes fadeInTop {
+    0% {
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +33,7 @@
 body {
     background-color: var(--lightColor);
     font-family: "OpenSansL";
+
 }
 
 header {
@@ -161,6 +172,7 @@ header .logo {
 
 .promo-section {
     width: 100%;
+    animation: fadeInTop 2s ease forwards;
 }
 
 .promo-section img {
@@ -170,6 +182,7 @@ header .logo {
 
 footer {
     background-color: var(--darkColor);
+    animation: fadeInTop 1s ease forwards;
 }
 
 .boletin {
@@ -249,6 +262,7 @@ label {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    animation: fadeInTop 2s ease forwards;
 }
 
 #faq {
@@ -259,6 +273,7 @@ label {
     max-width: 800px;
     margin: 0 auto;
     padding-top: 20px;
+    animation: fadeInTop 2s ease forwards;
 }
 
 .faq-item {
@@ -307,6 +322,7 @@ label {
     margin: 25px;
     align-items: center;
     justify-content: center;
+    animation: fadeInTop 2s ease forwards;
 }
 
 #marcas {
@@ -344,27 +360,26 @@ label {
 
 /*productos*/
 
-#contenedor{
-    font-family: sans-serif;
-    width: 100vw;
+#productos{
     display: grid;
-    grid-template-columns: repeat(auto-fill);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    text-align: center;
-    margin-bottom: 8%;
-    margin-top: 2%;
+    margin: 25px;
+    align-items:stretch;
+    justify-content: center;
+    animation: fadeInTop 2s ease forwards;
+    margin-top: 50px;
 }
 
 
 
 .producto {
-    width: 100%; 
-    max-width: 200px; 
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
 
@@ -374,11 +389,27 @@ label {
 
 
 .imagenProducto {
+    border-radius: 10px;
     width: 100%;
+    max-height: 300px;
+
 }
 
 .nombreProducto {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1.1em;
+    text-align: center;
     color: #333;
+    padding: 5px;
+    font-family: OpenSansL;
+    font-weight: bold;
+}
+
+#titulo{
+    color: var(--darkColor);
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 0 0 0;
+    font-family: OpenSansL;
 }
