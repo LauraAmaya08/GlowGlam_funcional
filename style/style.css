@@ -182,7 +182,6 @@ header .logo {
 
 footer {
     background-color: var(--darkColor);
-    animation: fadeInTop 1s ease forwards;
 }
 
 .boletin {
@@ -360,7 +359,11 @@ label {
 
 /*productos*/
 
-#productos{
+#productos,
+#productosFBM,
+#productosFB,
+#productosRB,
+#productosRhode{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
@@ -411,6 +414,7 @@ label {
     margin: 10px;
     padding: 10px 0 0 0;
     font-family: OpenSansL;
+    animation: fadeInTop 2s ease forwards;
 }
 
 
@@ -435,4 +439,41 @@ label {
     text-decoration: none;
     color: inherit;
     display: block; 
+}
+
+
+/*Florence By Mills*/
+
+.interpagina{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    max-height: 80vh;
+    justify-content: center;
+    animation: fadeInTop 2s ease forwards;
+}
+
+.banda__imagen{
+    width: 40%;
+    border-radius: 16px;
+}
+
+.frase{
+    text-align: center;
+    font-family: openSansL;
+    text-align: start;
+    font-size: 1em;
+    width: 50vh;
+}
+
+.descrip{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.logoMarca{
+    margin: 5px;
 }
