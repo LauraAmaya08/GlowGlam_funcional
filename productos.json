@@ -5,14 +5,16 @@
             "imagen": "images/imagenesfbm/FBM_GlowYeahLipOil_DTC_110623.webp",
             "descrip": "Un aceite labial que ofrece un aspecto espectacular y una hidratación intensa mientras añade un toque de brillo para ese GLOW YEAH durante todo el día. Nada de labios secos aquí: la manteca de mango africano y la flor de paracress nos mantienen frescas y hermosas. Úsalo solo o sobre tu color de labios favorito para un extra de hidratación.",
             "precio": 16.00,
-            "marca": "Florence By Mills"
+            "marca": "Florence By Mills",
+            "id": 1
         },
         {
             "nombre": "Almohadillas de gel desinflamantes",
             "imagen": "images/imagenesfbm/FBM_FloatingUnderTheEyesDepuffing_DTC_110623.webp",
             "descrip": "Estos parches en gel con forma de nube flotan bajo nuestros ojos con extracto de cafeína para ayudar a despertar la piel cansada y con bolsas que a veces pueden causar la apariencia de ojeras. También están impregnados de extracto de té verde para calmar y extracto de cactus para hidratar.",
             "precio": 36.00,
-            "marca": "Florence By Mills"
+            "marca": "Florence By Mills",
+            "id": 2
         },
         {
             "nombre": "Crema Hidratante Sin Aceite Dreamy Dew",
@@ -20,7 +22,8 @@
             "descrip": "Una crema ligera como una pluma, hidratante y libre de aceite que hace que nuestra piel se sienta maravillosamente bien para enamorarse. La fórmula sedosa incluye extractos de dos tipos de flor de loto y vitamina B12 para ayudar a controlar el exceso de grasa y calmar la piel. La corteza de sauce ayuda a mantener la piel suave. Usada mañana y noche, Dreamy Dew ayuda a que nuestra piel se sienta fresca y radiante, lista para lo que venga después.",
             "precio": 18.00,
             "size":"1.7 oz/ 50 ml",
-            "marca": "Florence By Mills"
+            "marca": "Florence By Mills",
+            "id": 3
         },
         {
             "nombre": "Limpiador Facial Magico Limpio",
@@ -28,14 +31,16 @@
             "descrip": "Un limpiador facial cremoso que elimina el maquillaje, la suciedad y el aceite. La magia comienza con el ácido ferúlico, un antioxidante de origen vegetal que protege la piel del daño ambiental, como el smog. Una mezcla equilibrante de algas marinas, hiedra, limón y salvia controla el exceso de aceite para que nuestros poros permanezcan libres de impurezas. La piel se sentirá rejuvenecida, nunca seca y siempre hermosa",
             "precio": 36.00,
             "size":"3.4 fl oz/ 100 ml",
-            "marca": "Florence By Mills"
+            "marca": "Florence By Mills",
+            "id": 4
         },
         {
             "nombre": "Mascarilla Exfoliante Calmante Discreta",
             "imagen": "images/imagenesfbm/FLORENCEHOLIDAY-144.webp",
             "descrip": "Una mascarilla divertida y digna de selfies, en tono rosado iridiscente, que se desprende y está enriquecida con vitaminas, antioxidantes y extracto de nenúfar para ayudar a calmar nuestra piel después de un día estresante.",
             "precio": 24.00,
-            "marca": "Florence By Mills"
+            "marca": "Florence By Mills",
+            "id": 5
         },
         {
             "nombre": "Spot a Spot Parches Para el Acne",
@@ -43,7 +48,8 @@
             "descrip": "Estos parches para el acné 'Spot A Spot' son pegatinas altamente satisfactorias para los granos y el escudo definitivo para cada punto, marca o imperfección que asome en nuestra piel. Incluyen ingredientes que aman la piel como el aceite de menta, ácido salicílico y aceite de árbol de té para combatir directamente cada grano. El hidrocoloide sella cada punto para protegerlo de las bacterias y ayuda a eliminar la suciedad, el exceso de grasa y las impurezas para lograr una apariencia más suave.",
             "precio": 15.00,
             "size":"1.7 oz/ 50 ml",
-            "marca": "Florence By Mills"
+            "marca": "Florence By Mills",
+            "id": 6
         },
 
 
@@ -54,7 +60,8 @@
             "descrip": "Obtén luminosidad sin lucir grasosa. Una base de maquillaje hidratante y llena de beneficios, de larga duración, que proporciona un acabado naturalmente radiante con una sensación de segunda piel, disponible en 50 tonos para todo tipo de piel.",
             "precio": 40.00,
             "size":"123g",
-            "marca": "Fenty Beauty"
+            "marca": "Fenty Beauty",
+            "id": 7
         },
         {
             "nombre": "Delineador Líquido Brillante para Párpados Glitty",
@@ -62,7 +69,8 @@
             "descrip": "Un delineador de ojos de edición limitada con un vibrante brillo y pigmentación intensa, ideal para una aplicación precisa.",
             "precio": 24.00,
             "size":"3.3 mL / 0.11 fl. oz.",
-            "marca": "Fenty Beauty"
+            "marca": "Fenty Beauty",
+            "id": 8
         },
         {
             "nombre": "Iluminador Freestyle Killawatt",
@@ -70,7 +78,8 @@
             "descrip": "Iluminador en polvo cremoso, ligero y espectacular para un resplandor construible que perdura.",
             "precio": 40.00,
             "size":"7.5 g",
-            "marca": "Fenty Beauty"
+            "marca": "Fenty Beauty",
+            "id": 9
         },
         {
             "nombre": "Velo de Diamante para Todo el Cuerpo Diamond Bomb",
@@ -78,7 +87,8 @@
             "descrip": "Un iluminador velo de purpurina superfina que deja la piel cubierta de destellos brillantes como diamantes, perfecto para captar todas las miradas.",
             "precio": 42.00,
             "size":"8 g / 0.28 oz",
-            "marca": "Fenty Beauty"
+            "marca": "Fenty Beauty",
+            "id": 10
         },
         {
             "nombre": "Labial Líquido Fenty Icon",
@@ -86,7 +96,8 @@
             "descrip": "Olvídate de las líneas finas y la sequedad del pasado: obtén un color líquido lujoso y esponjoso en tonos llamativos que se sienten suaves y cómodos todo el día.",
             "precio": 29.00,
             "size":"5.5 g / 0.19 oz",
-            "marca": "Fenty Beauty"
+            "marca": "Fenty Beauty",
+            "id": 11
         },
         {
             "nombre": "Máscara de Pestañas Voluminizadora Hella Thicc",
@@ -94,7 +105,8 @@
             "descrip": "Logra pestañas irresistiblemente gruesas y levantadas con cada aplicación de esta máscara de larga duración.",
             "precio": 19.00,
             "size":"10 mL / 0.33 fl. oz.",
-            "marca": "Fenty Beauty"
+            "marca": "Fenty Beauty",
+            "id": 12
         },
         
 
@@ -106,35 +118,40 @@
             "imagen": "images/imagenes_rarebeauty/soft-pinch-tinted-lip-oil-hope-1440x1952.webp",
             "descrip": "Un innovador gel labial que se transforma en un ligero aceite, comenzando con un acabado brillante y luego dejando los labios con un ligero tinte mientras se sienten cómodos, nunca pegajosos, durante todo el día.",
             "precio": 20.00,
-            "marca": "Rare Beauty"
+            "marca": "Rare Beauty",
+            "id": 13
         },
         {
             "nombre": "Bronzer Warm Wishes",
             "imagen": "images/imagenes_rarebeauty/Bronzer-Stick-Power-Boost-SKU.webp",
             "descrip": "Un stick bronceador innovador que crea al instante un resplandor besado por el sol y se difumina perfectamente para un acabado de segunda piel. ¡Simplemente desliza, difumina y listo para salir!",
             "precio": 26.00,
-            "marca": "Rare Beauty"
+            "marca": "Rare Beauty",
+            "id": 14
         },
         {
             "nombre": "Corrector Iluminador Líquido",
             "imagen": "images/imagenes_rarebeauty/Concealer-100W-SKU_5bea0f14-cf53-4fbd-b371-9c507d882817.webp",
             "descrip": "Un corrector ligero e hidratante que proporciona cobertura ajustable donde la necesitas, al mismo tiempo que ilumina la piel con un acabado radiante.",
             "precio": 22.00,
-            "marca": "Rare Beauty"
+            "marca": "Rare Beauty",
+            "id": 15
         },
         {
             "nombre": "Iluminador Líquido Luz Positiva",
             "imagen": "images/imagenes_rarebeauty/Luminizer-Enlighten-SKU_52f89bf8-cbe2-46c5-944d-d93fcb04fba3.webp",
             "descrip": "Un iluminador líquido sedoso y de segunda piel que crea al instante un resplandor brillante y construible, mientras nutre la piel para que luzca radiante durante todo el día.",
             "precio": 25.00,
-            "marca": "Rare Beauty"
+            "marca": "Rare Beauty",
+            "id": 16
         },
         {
             "nombre": "Máscara Voluminizadora Trazos Perfectos",
             "imagen": "images/imagenes_rarebeauty/Full-Size-Mascara-Open-SKU.webp",
             "descrip": "Creada para todo tipo de pestañas, esta máscara todo-en-uno combina una fórmula ligera y fácil de construir con un cepillo universal que abraza los ojos, para elevar, alargar, rizar y dar volumen a cada pestaña desde cualquier ángulo.",
             "precio": 20.00,
-            "marca": "Rare Beauty"
+            "marca": "Rare Beauty",
+            "id": 17
         },
         {
             "nombre": "Rubor Líquido Soft Pinch",
@@ -143,7 +160,8 @@
             "precio": 23.00,
             "precioOferta":11.5,
             "size":"10 mL / 0.33 fl. oz.",
-            "marca": "Rare Beauty"
+            "marca": "Rare Beauty",
+            "id": 18
         },
 
 
@@ -155,7 +173,8 @@
             "descrip": "Te presentamos nuestro nuevo Tratamiento de Péptidos para Labios sabor vainilla de Rhode (anteriormente conocido como Vanilla Cake) mismo sabor icónico con un nuevo nombre y en nuestro nuevo envase brillante de pies a cabeza. Un tratamiento restaurador para los labios, para unos labios naturalmente voluminosos y suaves como almohadas, día y noche. Esta fórmula soñadora deja los labios con un aspecto brillante y trabaja intensamente para nutrir la piel seca desde el interior.",
             "precio": 18.00,
             "size":"10 mL / 0.33 fl. oz.",
-            "marca": "Rhode"
+            "marca": "Rhode",
+            "id": 19
         },
         {
             "nombre": "Pineapple Refresh",
@@ -163,7 +182,9 @@
             "descrip": "El primer paso en tu rutina Rhode. Un limpiador diario que se transforma de bálsamo a espuma, refrescante, formulado con ácido poliglutámico (PGA), extracto de té verde y enzima de piña para dejar tu piel limpia, suave y elástica después del enjuague. Suficientemente suave para usar mañana y noche, y seguro para pieles sensibles.",
             "precio": 28.00,
             "size":"150 mL / 5fl. oz.",
-            "marca": "Rhode"
+            "marca": "Rhode",
+            "id": 20
+
         },
         {
             "nombre": "Pocket Blush",
@@ -171,21 +192,24 @@
             "descrip": "Un poco de rubor para un toque de color. Nuestro rubor en crema para llevar despierta mejillas y labios con un rubor satinado y difuminado que se funde suavemente y dura todo el día. Es una fórmula ligera que hidrata la piel para unas mejillas suaves como las de un bebé y deja un acabado brillante sin sensación grasosa.",
             "precio": 24.00,
             "size":"5.3g / 0.18 oz.",
-            "marca": "Rhode"
+            "marca": "Rhode",
+            "id": 21
         },
         {
             "nombre": "Summer Lip Case",
             "imagen": "images/imagenes_rhode/PDP-Desktop-saltytan_1440x.webp",
             "descrip": "Una funda de silicona para tu teléfono que siempre lleva contigo tu lápiz labial. Nuestro diseño de burbujas tiene un tacto sedoso y suave, con una parte trasera acolchada para un agarre fácil. Compatible con iPhone 14 o 15 Pro/Pro Max y tu Tratamiento de Péptidos para Labios o Tinte favorito. Solo para el verano, hemos creado cuatro ediciones limitadas de fundas para labios diseñadas para combinar con los Tintes de Péptidos para Labios de verano.",
             "precio": 35.00,
-            "marca": "Rhode"
+            "marca": "Rhode",
+            "id": 22
         },
         {
             "nombre": "The Rhode Kit",
             "imagen": "images/imagenes_rhode/Hero-1_Desktop_1440x.webp",
             "descrip": "Conoce tus nuevos clásicos, todos reunidos en la bolsa de burbujas Rhode. Nuestros esenciales probados y verdaderos para el cuidado de la piel están formulados para nutrir la barrera cutánea al máximo, se sienten como un sueño en tu piel y son versátiles en tu rutina. Úsalos mañana y noche, solos o combinados con otros productos para el cuidado de la piel, mézclalos con maquillaje y llévalos contigo en tus viajes.",
             "precio": 118.00,
-            "marca": "Rhode"
+            "marca": "Rhode",
+            "id": 23
         },
         {
             "nombre": "The Summer Peptide Lip Tints",
@@ -193,7 +217,8 @@
             "descrip": "Nuestra colección completa de tintes labiales ofrece tonos translúcidos pero construibles que se funden en los labios para un acabado rico y brillante.",
             "precio": 65.00,
             "size":"10 mL / 0.33 fl. oz.",
-            "marca": "Rhode"
+            "marca": "Rhode",
+            "id": 24
         }
     ]
 }

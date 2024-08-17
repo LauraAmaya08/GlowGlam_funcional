@@ -371,13 +371,13 @@ label {
     align-items:stretch;
     justify-content: center;
     animation: fadeInTop 2s ease forwards;
-    margin-top: 50px;
 }
 
 
 
 .producto {
     display: flex;
+    border-radius: 16px;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -476,4 +476,59 @@ label {
 
 .logoMarca{
     margin: 5px;
+}
+
+/*Producto especifico*/
+
+#productoEspecifico{
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    height: 80vh;
+    animation: fadeInTop 2s ease forwards;
+}
+
+#imagenProducto{
+    border-radius: 16px;
+    width: 50%;
+    height: 100%;
+}
+
+.infoProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5%;
+}
+
+#nombreProducto{
+    text-align: start;
+    margin-bottom: 5px;
+}
+
+#descripcionProducto{
+    text-align: start;
+    padding: 5px 0 5px 0;
+}
+
+#precioProducto,
+#productosize{
+    font-size: 1em;
+}
+
+#comprar{
+    margin-top: 3%;
+    border-radius: 16px;
+    color: white;
+    border: none;
+    background-color: var(--darkColor);
+    height: 40px;
+    width: 100px;
+}
+
+#comprar:hover{
+    background-color: var(--hoverColor);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    cursor: pointer;
 }

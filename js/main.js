@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async() => {
     const elementoLista = document.querySelectorAll(".lista__boton--click");
 
     elementoLista.forEach(element => {
@@ -46,6 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+cargarTodosLosProductos()
+cargarProductosPorMarca("Florence By Mills", "productosFBM");
+cargarProductosPorMarca("Fenty Beauty", "productosFB");
+cargarProductosPorMarca("Rare Beauty", "productosRB");
+cargarProductosPorMarca("Rhode", "productosRhode");
+mostrarProductoEspecifico()
+})
+
 //Cargar Json y mostrar Productos
 
 const cargarJson = async() => {
@@ -53,7 +61,7 @@ const cargarJson = async() => {
         const respuesta = await fetch("../productos.json")
         if (respuesta.ok){
             const datos = await respuesta.json();
-            return productosArray = datos.productos
+            return datos.productos
         }else{
             throw new Error ("Error al conectar con la base de datos")
         }
@@ -63,13 +71,13 @@ const cargarJson = async() => {
 }
 
 const cargarTodosLosProductos = async() =>{
-    await cargarJson()
+    const productosArray = await cargarJson()
     try {
         let productos = "";
         productosArray.forEach(element => {
             let precio = element.precio
             productos += `<div class = "producto">
-            <a href="../index.html" class="productoEnlace">
+            <a href="productoDescrip.html" class="productoEnlace" data-id="${element.id}">
             <img class= "imagenProducto" src= "../${element.imagen}" >
             <div class="info">
             <h2 class= "nombreProducto"> ${element.nombre}</h2>
@@ -81,130 +89,71 @@ const cargarTodosLosProductos = async() =>{
             `
         });
         document.getElementById("productos").innerHTML = productos;
+        document.querySelectorAll('.productoEnlace').forEach(link => {
+            link.addEventListener('click', function(event) {
+                const productoId = this.getAttribute('data-id');
+                localStorage.setItem('productoId', productoId);
+            });
+        });
     } catch (error) {
         console.error("Error:", error.message);
     }
 }
 
-const cargarProductosFBM = async() =>{
-    await cargarJson()
+const cargarProductosPorMarca = async (marca, contenedorId) => {
+    const productosArray = await cargarJson();
     try {
         let productos = "";
-        const listaFBM = [];
-        productosArray.forEach(element => {
-            if (element.marca === "Florence By Mills"){
-                listaFBM.push(element)
-            }
+        productosArray.filter(element => element.marca === marca).forEach(element => {
+            let precio = element.precio;
+            productos += `<div class="producto">
+                <a href="productoDescrip.html" class="productoEnlace" data-id="${element.id}">
+                    <img class="imagenProducto" src="../${element.imagen}" >
+                    <div class="info">
+                        <h2 class="nombreProducto"> ${element.nombre}</h2>
+                        <h3 class="precioProducto"> $${precio.toFixed(2)} </h3>
+                    </div>
+                </a>
+            </div>`;
         });
-        listaFBM.forEach(element => {
-            let precio = element.precio
-            productos += `<div class = "producto">
-            <a href="../index.html" class="productoEnlace">
-            <img class= "imagenProducto" src= "../${element.imagen}" >
-            <div class="info">
-            <h2 class= "nombreProducto"> ${element.nombre}</h2>
-            <h3 class= "precioProducto"> $${precio.toFixed(2)} </h3>
-            </div>
-            </a>
-            </div>
-            `
+        document.getElementById(contenedorId).innerHTML = productos;
+        document.querySelectorAll('.productoEnlace').forEach(link => {
+            link.addEventListener('click', function(event) {
+                const productoId = this.getAttribute('data-id');
+                localStorage.setItem('productoId', productoId);
+            });
         });
-        document.getElementById("productosFBM").innerHTML= productos
     } catch (error) {
         console.error("Error:", error.message);
     }
-}
+};
 
-const cargarProductosFB = async() =>{
-    await cargarJson()
+
+const mostrarProductoEspecifico = async () => {
+    const productosArray = await cargarJson();
+    console.log(productosArray);
     try {
-        let productos = "";
-        const listaFB = [];
-        productosArray.forEach(element => {
-            if (element.marca === "Fenty Beauty"){
-                listaFB.push(element)
-            }
-        });
-        listaFB.forEach(element => {
-            let precio = element.precio
-            productos += `<div class = "producto">
-            <a href="../index.html" class="productoEnlace">
-            <img class= "imagenProducto" src= "../${element.imagen}" >
-            <div class="info">
-            <h2 class= "nombreProducto"> ${element.nombre}</h2>
-            <h3 class= "precioProducto"> $${precio.toFixed(2)} </h3>
-            </div>
-            </a>
-            </div>
-            `
-        });
-        document.getElementById("productosFB").innerHTML= productos
-    } catch (error) {
-        console.error("Error:", error.message);
-    }
-}
+        const productoId = localStorage.getItem("productoId");
+        console.log("Producto ID recuperado:", productoId);
+        if (!productoId) {
+            console.error("No se encontró el ID del producto");
+            return; 
+        }
+        const producto = productosArray.find(element => element.id == productoId);
+        console.log(producto)
+        if (!producto) {
+            console.error("No se encontró el producto");
+            return;
+        }
 
-const cargarProductosRB = async() =>{
-    await cargarJson()
-    try {
-        let productos = "";
-        const listaRB = [];
-        productosArray.forEach(element => {
-            if (element.marca === "Rare Beauty"){
-                listaRB.push(element)
-            }
-        });
-        listaRB.forEach(element => {
-            let precio = element.precio
-            productos += `<div class = "producto">
-            <a href="../index.html" class="productoEnlace">
-            <img class= "imagenProducto" src= "../${element.imagen}" >
-            <div class="info">
-            <h2 class= "nombreProducto"> ${element.nombre}</h2>
-            <h3 class= "precioProducto"> $${precio.toFixed(2)} </h3>
-            </div>
-            </a>
-            </div>
-            `
-        });
-        document.getElementById("productosRB").innerHTML= productos
+        document.getElementById('nombreProducto').textContent = producto.nombre;
+        document.getElementById('precioProducto').textContent = `$${producto.precio.toFixed(2)}`;
+        document.getElementById('descripcionProducto').textContent = producto.descrip;
+        document.getElementById('imagenProducto').src = `../${producto.imagen}`;
+        document.getElementById("productosize").textContent = producto.size;
     } catch (error) {
-        console.error("Error:", error.message);
+        console.error("Error:", error);
     }
-}
+};
 
-const cargarProductosRhode = async() =>{
-    await cargarJson()
-    try {
-        let productos = "";
-        const listaRhode = [];
-        productosArray.forEach(element => {
-            if (element.marca === "Rhode"){
-                listaRhode.push(element)
-            }
-        });
-        listaRhode.forEach(element => {
-            let precio = element.precio
-            productos += `<div class = "producto">
-            <a href="../index.html" class="productoEnlace">
-            <img class= "imagenProducto" src= "../${element.imagen}" >
-            <div class="info">
-            <h2 class= "nombreProducto"> ${element.nombre}</h2>
-            <h3 class= "precioProducto"> $${precio.toFixed(2)} </h3>
-            </div>
-            </a>
-            </div>
-            `
-        });
-        document.getElementById("productosRhode").innerHTML= productos
-    } catch (error) {
-        console.error("Error:", error.message);
-    }
-}
 
-cargarTodosLosProductos()
-cargarProductosFBM()
-cargarProductosFB()
-cargarProductosRB()
-cargarProductosRhode()
-})

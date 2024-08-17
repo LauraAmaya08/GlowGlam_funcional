@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowGlam Latam</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+<body>
+    <header>
+        <img src="../images/home/Gray_and_Black_Simple_Studio_Logo__3_-removebg-preview.png" alt="Logo del sitio"
+            width="180px" class="logo" />
+        <a href="#" class="carrito"><img src="../assets/carrito.svg"></a>
+        <button id="abrir"><img src="../assets/menu.svg"></button>
+        <nav class="navegador">
+            <ul class="lista">
+                <button id="cerrar"><img src="../assets/cerra.svg" alt=""></button>
+                <li class="lista_item lista_item--click">
+                    <div class="lista__boton">
+                        <img src="../assets/incio.svg">
+                        <a href="../index.html" class="nav_link">Inicio</a>
+                    </div>
+                </li>
+                <li class="lista_item lista_item--click">
+                    <div class="lista__boton">
+                        <a href="todosProductos.html" class="nav_link">Todos los Productos</a>
+                    </div>
+                </li>
+                <li class="lista_item">
+                    <div class="lista__boton lista__boton--click">
+                        <a href="#" class="nav_link">Marcas</a>
+                        <img src="../assets/flecha.svg" class="flecha"></img>
+                    </div>
+                    <ul class="lista_Mostrar">
+                        <li class="adentro">
+                            <a href="FBM.html" class="nav_link nav_link--adentro">Florence By Mills</a>
+                        </li>
+                        <li class="adentro">
+                            <a href="rhode.html" class="nav_link nav_link--adentro">Rhode</a>
+                        </li>
+                        <li class="adentro">
+                            <a href="fentyBeauty.html" class="nav_link nav_link--adentro">Fenty Beauty</a>
+                        </li>
+                        <li class="adentro">
+                            <a href="rareBeauty.html" class="nav_link nav_link--adentro">Rare Beauty</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="productoEspecifico">
+        <img id="imagenProducto" alt="Producto" width="200px">
+        <div class="infoProducto">
+            <h1 id="nombreProducto"></h1>
+            <p id="descripcionProducto"></p>
+            <h2 id="precioProducto"></h2>
+            <h2 id="productosize"></h2> 
+            <button id="comprar">¡Comprar Ahora!</button>
+        </div>
+    </section>
+    <script src="../js/main.js"></script>
+</body>
+</html>
