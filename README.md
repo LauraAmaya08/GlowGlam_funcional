@@ -1,7 +1,7 @@
 <h1>Glow Glam - Tienda de Maquillaje :lipstick:</h1>
 
 <p align="center" style="background-color: black">
-  <img src="" alt="Imagen referencial" width="400" />
+  <img src="images/home/Gray_and_Black_Simple_Studio_Logo__3_-removebg-preview.png" alt="Imagen referencial" width="400" />
 </p>
 
 
