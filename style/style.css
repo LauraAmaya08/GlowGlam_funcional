@@ -561,12 +561,13 @@ label {
         font-size: 1em;
     }
 
+
     #abrir {
         right: 4%;
     }
 
-    .lista{
-        width: 40vh;
+    .lista {
+        width: 30vh;
     }
 
     .lista__boton {
@@ -574,8 +575,8 @@ label {
         margin: 0 auto;
     }
 
-    .bienvenida__texto{
-        width: 50vh;
+    .bienvenida__texto {
+        width: 300px;
     }
 
     .faq-pregunta {
@@ -586,7 +587,7 @@ label {
         padding: 10px;
     }
 
-    .interpagina{
+    .interpagina {
         flex-direction: column;
         margin-top: 120px;
         margin-bottom: 120px;
@@ -594,9 +595,19 @@ label {
         align-items: center;
     }
 
-    .banda__imagen{
+    .promo-section img {
+        height: 20vh;
+    }
+    
+
+    .banda__imagen {
         width: 100%;
         border-radius: 16px;
+    }
+
+    .frase {
+        width: 30vh;
+        text-align: center;
     }
 
     #productoEspecifico {
@@ -618,5 +629,3 @@ label {
         height: 50px;
     }
 }
-
-
