@@ -234,15 +234,28 @@ const agregarCarrito = () => {
 };
 
 const mostrarCarritoEnDOM = () => {
-  const carrito = JSON.parse(localStorage.getItem("carrito") || []);
-  const listaCarrito = document.querySelector("#listaCarrito");
+    // Obtiene los datos del carrito desde el sesion storage
+    const carritoData = localStorage.getItem("carrito");
+
+    // Inicializa un arrray en caso de que no exista el carrito 
+    let carrito = [];
+    try {
+      // Si existe los datos, los asigna al carrito
+      if (carritoData) {
+        carrito = JSON.parse(carritoData) || [];
+      }
+    } catch (e) {
+      console.error("Error:", e);
+      carrito = []; //Si da el error, para no detener la ejecución, se asinga un array vacío también
+    }
+  const listaCarrito = document.querySelector("#listaCarrito");//obtiene la lista para agregar los productos
 
   if (!listaCarrito) {
     console.error("Elemento con ID 'listaCarrito' no encontrado en el DOM");
-    return;
+    return;//IMprime error
   }
 
-  if (carrito.length === 0) {
+  if (carrito.length === 0 || !localStorage.getItem("carrito")) {
     const carritoVacio = document.querySelector(".carritoVacio");
     carritoVacio.classList.add("activo");
     
@@ -263,7 +276,7 @@ const mostrarCarritoEnDOM = () => {
     li.dataset.id = element.id;
     li.classList.add("carritoItem");
     const infoCarrito = ` 
-        <img class="imagenProductoCarrito" src="../${element.imagen}"
+        <img class="imagenProductoCarrito" src="../${element.imagen}">
         <div class="infoCarritoDentro">
           <h2 class="producto__nombre">${element.nombre}</h2>
           <p class="producto__cantidad">
@@ -320,6 +333,7 @@ const mostrarMensajePago = () => {
   const mensaje = document.querySelector(".mensajePago")
   const oscurecer = document.querySelector(".oscurecer");
   boton.addEventListener("click",()=>{
+    localStorage.removeItem("carrito")
     mensaje.classList.add("activo")
     oscurecer.classList.add("activo")
   })
@@ -328,5 +342,7 @@ const mostrarMensajePago = () => {
     oscurecer.classList.remove("activo")
     const carritoVacio = document.querySelector(".carritoVacio");
     carritoVacio.classList.add("activo");
+    const carritoLLeno = document.querySelector(".container");
+    carritoLLeno.classList.remove("activo");
   });
 }
