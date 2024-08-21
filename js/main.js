@@ -2,16 +2,7 @@
 //ejecuta el Javascript cuando carga el DOM
 
 document.addEventListener("DOMContentLoaded", async () => {
-
-  //validación de donde está el elemento de la lista del carrito
-  const listaCarrito = document.querySelector("#listaCarrito");
-  if (listaCarrito) {
-    console.log("Elemento con ID 'listaCarrito' encontrado.");
-  } else {
-    console.error("Elemento con ID 'listaCarrito' no encontrado en el DOM.");
-  }
   
-
   //Dinamismo del menú desplegable
 
   const elementoLista = document.querySelectorAll(".lista__boton--click");//Selecciona los elementos que tengan sublistas en ellos
@@ -60,18 +51,27 @@ document.addEventListener("DOMContentLoaded", async () => {
       itemFaq.classList.toggle("active");// Muestra u oculta la respuesta de la pregunta clickeada
     });
   });
-
-
-  //Llamado de funciones para mostrar productos
-  cargarTodosLosProductos();
-  cargarProductosPorMarca("Florence By Mills", "productosFBM");
-  cargarProductosPorMarca("Fenty Beauty", "productosFB");
-  cargarProductosPorMarca("Rare Beauty", "productosRB");
-  cargarProductosPorMarca("Rhode", "productosRhode");
-  mostrarProductoEspecifico();
-  agregarCarrito()
-  mostrarCarritoEnDOM()
+  if (window.location.pathname.includes("todosProductos")){
+    cargarTodosLosProductos();
+  } else if (window.location.pathname.includes("FBM")){
+    cargarProductosPorMarca("Florence By Mills", "productosFBM");
+  }else if (window.location.pathname.includes("fentyBeauty")){
+    cargarProductosPorMarca("Fenty Beauty", "productosFB");
+  }else if (window.location.pathname.includes("rareBeauty")){
+    cargarProductosPorMarca("Rare Beauty", "productosRB");
+  } else if (window.location.pathname.includes("rhode")){
+    cargarProductosPorMarca("Rhode", "productosRhode");
+  } else if (window.location.pathname.includes("productoDescrip")){
+    mostrarProductoEspecifico();
+    agregarCarrito()
+  } else if (window.location.pathname.includes("carrito")){
+    mostrarCarritoEnDOM()
+  } 
 });
+//Llamado de funciones para mostrar productos
+
+//
+//
 
 //Cargar Json y mostrar Productos
 
@@ -243,20 +243,43 @@ const mostrarCarritoEnDOM = () => {
   listaCarrito.textContent = "";
   carrito.forEach((element) => {
     const li = document.createElement("li");
+    li.dataset.id = element.id;
     li.classList.add("carritoItem");
-    const infoCarrito = `            
-        <h2 class="producto__nombre">${element.nombre}</h2>
-        <p class="producto__cantidad">
-            <span>Cantidad: </span>${element.cantidad}
-        </p>
-        <p class="producto__precio">
-            <span>Precio Unitario: </span>$${element.precio.toFixed(2)}
-        </p>
-        <button class="boton__eliminar">
-        <img src="../assets/eliminar.svg" alt="Eliminar" width="20px">
-        </button>
+    const infoCarrito = ` 
+        <img class="imagenProductoCarrito" src="../${element.imagen}"
+        <div class="infoCarritoDentro">
+          <h2 class="producto__nombre">${element.nombre}</h2>
+          <p class="producto__cantidad">
+          <span>Cantidad: </span>${element.cantidad}
+          </p>
+          <p class="producto__precio">
+            <span>Precio Unitario: </span>$${element.precio}
+          </p>
+          <button class="boton__eliminar">
+          <img src="../assets/eliminar.svg" alt="Eliminar" width="20px">
+          </button>
+        </div>
         `;
     li.innerHTML = infoCarrito;
     listaCarrito.appendChild(li);
   });
+  eliminarBoton();
 };
+
+const eliminarBoton = () => {
+  const botonEliminar = document.querySelectorAll(".boton__eliminar")
+  botonEliminar.forEach(boton => {
+    boton.addEventListener("click", (event) => {
+      const li = event.target.closest("li");
+      const idProductoEliminar = li.dataset.id
+      eliminarProducto(idProductoEliminar)
+    })
+  });
+}
+
+const eliminarProducto = (id) => {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+  carrito = carrito.filter(producto => id != producto.id)
+  localStorage.setItem("carrito", JSON.stringify(carrito))
+  mostrarCarritoEnDOM()
+}
