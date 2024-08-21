@@ -51,24 +51,35 @@
             </ul>
         </nav>
     </header>
-    <section id="carrito">
-        <h2 class="titulo-seccion">¡Tu Carrito!</h2>
-        <ul id="listaCarrito"></ul>
+    <section class="carritoVacio">
+        <p>Actualmente tu carrito está vacío</p>
     </section>
-    <hr>
-    <section class="total">
-        <h3 class="total__total"><span>Total a pagar: </span> $121.5 </h3>
-        <p class="subtotal"><span>Subtotal:</span> $146 </p>
-        <p class="descuentos"><span>Descuentos:</span> -- </p>
-        <p class="total__envio"><span>Envío:</span> -- </p>
-    <button>Quiero pagar!</button>
-    <h2>Métodos de Pago Aceptados </h2>
-    <div class="metodos_pago">
-            <img class=metodo src="../images/descarga__2_-removebg-preview.png" alt="Visa" width="30">
-            <img class=metodo src="../images/png-clipart-mastercard-logo-credit-card-maestro-payment-card-mastercard-text-orange-thumbnail-removebg-preview.png" alt="MasterCard" width="30">
-            <img class=metodo src="../images/descarga__1_-removebg-preview.png" alt="PayPal" width="30">
+    <div class="oscurecer"></div>
+    <section class="mensajePago">
+        <h2>¡Gracias por tu compra! 🎉</h2>
+        <p>Te agradecemos sinceramente por elegirnos. Hemos recibido tu pedido y te enviaremos los pasos a seguir a tu correo electrónico en breve. Por favor, revisa tu bandeja de entrada para recibir toda la información necesaria. <br><br> Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos.<br><br>
+        ¡Que disfrutes tu compra!</p>
+        <button id="cerrarMensaje"><img src="../assets/cerra.svg" alt=""></button>
+    </section>
+    <div class="container">
+        <section id="carrito">
+            <h2 class="titulo-seccion">¡Tu Carrito!</h2>
+            <ul id="listaCarrito"></ul>
+        </section>
+        <section class="total">
+            <h3 class="total__total"><span>Total a pagar:</span> <div class="contenedorPrecio"></div></h3>
+            <p class="subtotal"><span>Subtotal:</span> --</p>
+            <p class="descuentos"><span>Descuentos:</span> -- </p>
+            <p class="total__envio"><span>Envío:</span> -- </p>
+        <button class="pagar">Quiero pagar!</button>
+        <h2 class="tituloCarrito">Métodos de Pago Aceptados </h2>
+        <div class="metodos_pago">
+                <img class=metodo src="../images/descarga__2_-removebg-preview.png" alt="Visa" width="30">
+                <img class=metodo src="../images/png-clipart-mastercard-logo-credit-card-maestro-payment-card-mastercard-text-orange-thumbnail-removebg-preview.png" alt="MasterCard" width="30">
+                <img class=metodo src="../images/descarga__1_-removebg-preview.png" alt="PayPal" width="30">
+        </div>
+        </section>
     </div>
-    </section>
     <script src="../js/main.js"></script>
 </body>
 </html>

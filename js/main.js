@@ -66,6 +66,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     agregarCarrito()
   } else if (window.location.pathname.includes("carrito")){
     mostrarCarritoEnDOM()
+    cuentaCarrito()
+    mostrarMensajePago()
   } 
 });
 //Llamado de funciones para mostrar productos
@@ -240,6 +242,21 @@ const mostrarCarritoEnDOM = () => {
     return;
   }
 
+  if (carrito.length === 0) {
+    const carritoVacio = document.querySelector(".carritoVacio");
+    carritoVacio.classList.add("activo");
+    
+    const carritoLleno = document.querySelector(".container");
+    carritoLleno.classList.remove("activo");
+  } else {
+    const carritoVacio = document.querySelector(".carritoVacio");
+    carritoVacio.classList.remove("activo");
+    
+    const carritoLleno = document.querySelector(".container");
+    carritoLleno.classList.add("activo");
+  }
+
+
   listaCarrito.textContent = "";
   carrito.forEach((element) => {
     const li = document.createElement("li");
@@ -278,8 +295,38 @@ const eliminarBoton = () => {
 }
 
 const eliminarProducto = (id) => {
-  let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+  let carrito = JSON.parse(localStorage.getItem("carrito") || [])
   carrito = carrito.filter(producto => id != producto.id)
   localStorage.setItem("carrito", JSON.stringify(carrito))
+  cuentaCarrito()
   mostrarCarritoEnDOM()
+}
+
+
+const cuentaCarrito = () =>{
+  const carrito = JSON.parse(localStorage.getItem("carrito")|| []);
+  let cuenta = 0;
+  carrito.forEach(producto => {
+    cuenta += parseFloat(producto.precio * producto.cantidad)
+  });
+  const container = document.querySelector(".contenedorPrecio")
+  container.textContent = `$ ${cuenta}
+  `
+  mostrarCarritoEnDOM() 
+}
+
+const mostrarMensajePago = () => {
+  const boton = document.querySelector(".pagar")
+  const mensaje = document.querySelector(".mensajePago")
+  const oscurecer = document.querySelector(".oscurecer");
+  boton.addEventListener("click",()=>{
+    mensaje.classList.add("activo")
+    oscurecer.classList.add("activo")
+  })
+  document.getElementById("cerrarMensaje").addEventListener("click", ()=>{
+    mensaje.classList.remove("activo")
+    oscurecer.classList.remove("activo")
+    const carritoVacio = document.querySelector(".carritoVacio");
+    carritoVacio.classList.add("activo");
+  });
 }

@@ -548,6 +548,8 @@ label {
     cursor: pointer;
 }
 
+
+
 /*Carrito*/
 
 #carrito{
@@ -561,7 +563,6 @@ label {
     display: flex;
     margin: 10px;
     justify-content: space-between;
-    border: 1px solid #0D0D0D;
     border-radius: 16px;
     align-items: center;
     max-width: 80vw;
@@ -570,6 +571,7 @@ label {
 
 #listaCarrito{
     animation: fadeInTop 2s ease forwards;
+    min-height: 50vh;
 }
 
 .imagenProductoCarrito{
@@ -586,6 +588,7 @@ label {
 
 span{
     font-weight: bold;
+    margin-left: 15px;
 }
 
 .boton__eliminar{
@@ -608,18 +611,13 @@ span{
 .total{
     text-align: end;
     padding: 20px;
-    font-family: openSans;
+    font-family: openSansL;
+
 }
 
 h3 span{
-    font-family: openSansNegrita;
+    font-family: openSansL;
     color: #000;
-}
-
-h3{
-    font-weight: 100;
-    color: rgb(164, 15, 15);
-    padding-bottom: 8px;
 }
 
 .botones{
@@ -638,7 +636,123 @@ h3{
     color: #fff;
 }
 
+.total{
+    width: 90%;
+    bottom: 0;
+    margin: auto;
+    padding: 40px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
+.metodos_pago {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 20px;
+}
+
+.total__total,
+.subtotal,
+.descuentos,
+.total__envio{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.pagar {
+    display: block;
+    width: 50%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 30px; 
+    padding: 10px;
+    background-color: #000;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.pagar:hover{
+    background-color: var(--hoverColor);
+    scale: 1.1;
+}
+
+.tituloCarrito{
+    padding: 40px;
+    padding-bottom: 0;
+    margin: auto
+}
+
+.tituloCarrito,
+span{
+    font-weight: bolder;
+}
+
+.container {
+    display: none;
+}
+
+.carritoVacio {
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    padding: 50px;
+    font-family: sans-serif;
+    animation: fadeInTop 2s ease forwards;
+}
+
+.mensajePago {
+    display: none;
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%); 
+    background-color: #ddd; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    text-align: center; 
+    padding: 20px; 
+    font-family: sans-serif; 
+    z-index: 1000; 
+    animation: fadeInTop 2s ease forwards;
+}
+
+.mensajePago h2,
+.mensajePago p{
+    padding-bottom: 15px; 
+}
+
+#cerrarMensaje{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.oscurecer {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999; 
+}
+
+
+.carritoVacio p {
+    font-size: 1.5em;
+}
+
+.activo{
+    display: block;
+}
 /*responsive móvil y tabletas*/
 
 @media (max-width: 600px) {
